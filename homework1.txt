@@ -1,0 +1,186 @@
+1.
+DELL@INSPIRON MINGW64 /d/git (master)
+$ pwd
+/d/git
+
+2.
+DELL@INSPIRON MINGW64 /d/git
+$ mkdir folder
+
+DELL@INSPIRON MINGW64 /d/git
+$ ls -la
+total 16
+drwxr-xr-x 1 DELL 197121 0 Jul 28 09:40 ./
+drwxr-xr-x 1 DELL 197121 0 Jul 27 21:59 ../
+drwxr-xr-x 1 DELL 197121 0 Jul 28 09:40 folder/
+
+3.
+DELL@INSPIRON MINGW64 /d/git
+$ cd folder/
+
+4.
+DELL@INSPIRON MINGW64 /d/git/folder
+$ mkdir 1 2 3
+
+DELL@INSPIRON MINGW64 /d/git/folder
+$ ls -la
+total 0
+drwxr-xr-x 1 DELL 197121 0 Jul 28 09:40 ./
+drwxr-xr-x 1 DELL 197121 0 Jul 28 09:40 ../
+drwxr-xr-x 1 DELL 197121 0 Jul 28 09:40 1/
+drwxr-xr-x 1 DELL 197121 0 Jul 28 09:40 2/
+drwxr-xr-x 1 DELL 197121 0 Jul 28 09:40 3/
+
+5.
+DELL@INSPIRON MINGW64 /d/git/folder
+$ cd 1/
+
+6.
+DELL@INSPIRON MINGW64 /d/git/folder/1
+$ touch 1.txt 2.txt 3.txt 1.json 2.json
+
+7.
+DELL@INSPIRON MINGW64 /d/git/folder/1
+$ mkdir folder1 folder2 folder3
+
+8.
+DELL@INSPIRON MINGW64 /d/git/folder/1
+$ ls -la
+total 4
+drwxr-xr-x 1 DELL 197121 0 Jul 28 09:48 ./
+drwxr-xr-x 1 DELL 197121 0 Jul 28 09:40 ../
+-rw-r--r-- 1 DELL 197121 0 Jul 28 09:47 1.json
+-rw-r--r-- 1 DELL 197121 0 Jul 28 09:47 1.txt
+-rw-r--r-- 1 DELL 197121 0 Jul 28 09:47 2.json
+-rw-r--r-- 1 DELL 197121 0 Jul 28 09:47 2.txt
+-rw-r--r-- 1 DELL 197121 0 Jul 28 09:47 3.txt
+drwxr-xr-x 1 DELL 197121 0 Jul 28 09:48 folder1/
+drwxr-xr-x 1 DELL 197121 0 Jul 28 09:48 folder2/
+drwxr-xr-x 1 DELL 197121 0 Jul 28 09:48 folder3/
+
+9.
+DELL@INSPIRON MINGW64 /d/git/folder/1
+$ vim 1.txt
+нажать "а"
+ввод текста
+нажать "Esc"
+ввод ":wq" (выйти и сохранить)
+
+10.
+DELL@INSPIRON MINGW64 /d/git/folder/1
+$ cd ..
+
+11.
+DELL@INSPIRON MINGW64 /d/git/folder
+$ mv /d/git/folder/1/1.json /d/git/folder/2/1.json | mv /d/git/folder/1/2.json /d/git/folder/2/2.json
+
+DELL@INSPIRON MINGW64 /d/git/folder
+$ ls -la
+total 8
+drwxr-xr-x 1 DELL 197121 0 Jul 28 09:40 ./
+drwxr-xr-x 1 DELL 197121 0 Jul 28 09:47 ../
+drwxr-xr-x 1 DELL 197121 0 Jul 28 10:42 1/
+drwxr-xr-x 1 DELL 197121 0 Jul 28 10:42 2/
+drwxr-xr-x 1 DELL 197121 0 Jul 28 09:40 3/
+
+DELL@INSPIRON MINGW64 /d/git/folder
+$ cd 2
+
+DELL@INSPIRON MINGW64 /d/git/folder/2
+$ ls -la
+total 0
+drwxr-xr-x 1 DELL 197121 0 Jul 28 10:42 ./
+drwxr-xr-x 1 DELL 197121 0 Jul 28 09:40 ../
+-rw-r--r-- 1 DELL 197121 0 Jul 28 09:47 1.json
+-rw-r--r-- 1 DELL 197121 0 Jul 28 09:47 2.json
+
+14.
+DELL@INSPIRON MINGW64 /d/git/folder/2
+$ cp /d/git/folder/2/1.json /d/git/folder/3/1.json | cp /d/git/folder/2/2.json /d/git/folder/3/2.json
+
+DELL@INSPIRON MINGW64 /d/git/folder/2
+$ cd ..
+
+15.
+DELL@INSPIRON MINGW64 /d/git/folder
+$ find . -name 1.json
+./2/1.json
+./3/1.json
+
+DELL@INSPIRON MINGW64 /d/git/folder
+$ cd 1
+
+16.
+DELL@INSPIRON MINGW64 /d/git/folder/1
+$ grep html 1.txt
+<html>
+        </html>
+
+17.
+DELL@INSPIRON MINGW64 /d/git (master)
+$ head 1.txt
+1234
+123415
+12351235ad21
+123qw1
+
+DELL@INSPIRON MINGW64 /d/git (master)
+$ head -n3 1.txt
+1234
+123415
+12351235ad21
+
+18.
+DELL@INSPIRON MINGW64 /d/git (master)
+$ tail -n2 1.txt
+12351235ad21
+123qw1
+
+19.
+DELL@INSPIRON MINGW64 /d/git (master)
+$ less 1.txt
+
+20.
+DELL@INSPIRON MINGW64 /d/git (master)
+$ date
+Thu Jul 29 16:19:41     2021
+
+DELL@INSPIRON MINGW64 /d/git (master)
+$ date +%D
+07/29/21
+
+задание *
+1. 
+DELL@INSPIRON MINGW64 /d/git (master)
+$ curl https://api.quarantine.country/api/v1/regions
+
+2.
+DELL@INSPIRON MINGW64 /d/git (master)
+$ nano script1.sh
+
+#!/bin/bash
+
+cd folder/
+mkdir 1 2 3
+cd 1/
+touch 1.txt 2.txt 3.txt 1.json 2.json
+mkdir folder1 folder2 folder3
+ls -la
+mv /d/git/folder/1/1.json /d/git/folder/2/1.json | mv /d/git/folder/1/2.json /d/git/folder/2/2.json
+
+Ctrl+x - сохранить и выйти
+
+DELL@INSPIRON MINGW64 /d/git (master)
+$ bash script1.sh
+total 4
+drwxr-xr-x 1 DELL 197121 0 Jul 30 19:33 .
+drwxr-xr-x 1 DELL 197121 0 Jul 30 19:33 ..
+-rw-r--r-- 1 DELL 197121 0 Jul 30 19:33 1.json
+-rw-r--r-- 1 DELL 197121 0 Jul 30 19:33 1.txt
+-rw-r--r-- 1 DELL 197121 0 Jul 30 19:33 2.json
+-rw-r--r-- 1 DELL 197121 0 Jul 30 19:33 2.txt
+-rw-r--r-- 1 DELL 197121 0 Jul 30 19:33 3.txt
+drwxr-xr-x 1 DELL 197121 0 Jul 30 19:33 folder1
+drwxr-xr-x 1 DELL 197121 0 Jul 30 19:33 folder2
+drwxr-xr-x 1 DELL 197121 0 Jul 30 19:33 folder3
+

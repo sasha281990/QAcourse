@@ -1,3 +1,0 @@
-Баг-репорт на поле регистрации http://itcareer.pythonanywhere.com/
-
-https://docs.google.com/spreadsheets/d/1E4g3vUx64D95tb1DJOTrJPBNYH9wbhySgatznZAFWj8/edit#gid=1633440701
